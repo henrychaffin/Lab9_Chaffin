@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Text Customizer</title>
+        <h1>Text Customizer</h1>
+        <style>
+            body {background-color: powderblue;}
+        </style>
+    </head>
+    <body>
+        <p id="a" style="border-width: 3px; border-style: solid; border-color: #FFFFFF">sample text</p>
+        <input type="text" id="fontColor" name="fontColor" value="enter color...">
+        <button onclick="changeFontColor()">CHANGE FONT COLOR</button>
+        <input type="text" id="borderColor" name="borderColor" value="enter color...">
+        <button onclick="changeBorderColor()">CHANGE BORDER COLOR</button>
+        <input type="text" id="borderWidth" name="borderWidth" value="enter width...">
+        <button onclick="changeBorderWidth()">CHANGE BORDER WIDTH</button>
+        <script>
+            function changeFontColor() {
+                var textID = document.getElementById("a");
+                var color = document.getElementById("fontColor").value;
+                if (color == "blue" || color == "green" || color == "red") {
+                    textID.style.color = color;
+                }
+            }
+            function changeBorderColor() {
+                var textID = document.getElementById("a");
+                var color = document.getElementById("borderColor").value;
+                if (color == "blue" || color == "green" || color == "red") {
+                    textID.style.borderColor = color;
+                }
+            }
+            function changeBorderWidth() {
+                var textID = document.getElementById("a");
+                var width = document.getElementById("borderWidth").value;
+                textID.style.borderWidth = width;
+            }
+        </script>
+    </body>
+</html>

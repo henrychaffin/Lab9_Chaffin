@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Password Checker</title>
+        <h1>Password Checker</h1>
+        <style>
+            body {background-color: powderblue;}
+        </style>
+    </head>
+    <body>
+        <input type="text" id="pass1" name="pass1" value="enter password...">
+        <input type="text" id="pass2" name="pass2" value="enter password...">
+        <button onclick="checkPass()">ENTER</button>
+        <p id="check"></p>
+        <script>
+            function checkPass() {
+                var pass1 = document.getElementById("pass1").value;
+                var pass2 = document.getElementById("pass2").value;
+                var check = document.getElementById("check");
+                if (pass1.length < 8) {
+                    check.innerHTML = "password too short";
+                }
+                else if (pass1 == pass2) {
+                    check.innerHTML = "passwords match";
+                }
+                else {
+                    check.innerHTML = "passwords do not match";
+                }
+            }
+        </script>
+    </body>
+</html>
